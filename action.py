@@ -25,25 +25,13 @@ def get_args():
     parser = argparse.ArgumentParser()
     parser.add_argument("phone", help="Your Phone Number.")
     parser.add_argument("password", help="The plaint text or MD5 value of the password.")
-    parser.add_argument("-s", dest="sc_key", nargs=1, help="The SCKEY of the Server Chan.")
     parser.add_argument("-t", dest="tg_bot_key", nargs=2, help="The Token and Chat ID of your telegram bot.")
-    parser.add_argument("-b", dest="bark_key", nargs=1, help="The key of your bark app.")
-    parser.add_argument("-w", dest="wecom_key", nargs=3, help="Your Wecom ID, App-AgentID and App-Secrets.")
-    parser.add_argument("-p", dest="push_plus_key", nargs=1, help="The token of your pushplus account.")
-    parser.add_argument("-q", dest="qmsg_key", nargs=1, help="The key of your Qmsg account.")
-    parser.add_argument("-d", dest="ding_token", nargs=1, help="The access token of Ding Talk bot.")
     args = parser.parse_args()
 
     return {
         "phone": args.phone,
         "password": args.password,
-        "sc_key": args.sc_key,
         "tg_bot_key": args.tg_bot_key,
-        "bark_key": args.bark_key,
-        "wecom_key": args.wecom_key,
-        "push_plus_key": args.push_plus_key,
-        "qmsg_key": args.qmsg_key,
-        "ding_token": args.ding_token,
     }
 
 
