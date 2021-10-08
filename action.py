@@ -121,7 +121,7 @@ class Push:
         if not self.info["tg_bot_key"]:
             return
         arg = self.info["tg_bot_key"]
-        url = "https://tg.angelxf.ml/bot{0}/sendMessage".format(arg[0])
+        url = "https://api.telegram.org/bot{0}/sendMessage".format(arg[0])
         data = {
             "chat_id": arg[1],
             "text": self.text,
